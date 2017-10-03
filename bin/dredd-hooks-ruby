@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
+
+Signal.trap("TERM") do
+  exit(0)
+end
+
 $LOAD_PATH.push File.join(File.dirname(__FILE__), "/../lib" )
 
 require 'dredd_hooks/cli'
